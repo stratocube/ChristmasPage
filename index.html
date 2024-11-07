@@ -3,7 +3,7 @@
 <body style="background-color:darkgreen;">
 <script>
 	function checkAns(question) {
-		var str = document.getElementById("input" + question.toString());
+		var str = document.getElementById("input" + question.toString()).trim().toLowerCase();
 		if (str.value == "") {
 			str.focus();
 			return;
@@ -13,7 +13,7 @@
 		switch (question) {
 		case 1:
 			if (str.value == "santa hat") {
-				reveal.innerHTML = "3";
+				reveal.innerHTML = "three";
 			} break;
 		case 2:
 			if (str.value == "football") {
@@ -21,7 +21,7 @@
 			} break;
 		case 3:
 			if (str.value == "coffee mug") {
-				reveal.innerHTML = "sub (1)";
+				reveal.innerHTML = " - (1)";
 			} break;
 		case 4:
 			if (str.value == "yellow trophy") {
@@ -40,18 +40,20 @@
 	}
 </script>
 
-	<h2 style="color:red;">
+    <h1 style="color:red;">
         Christmas<br/>
-	Reverse Scavenger Hunt!
-    </h2>
+	Reverse<br/>
+	Scavenger<br/>
+	Hunt!
+    </h1>
 
     <img src="Tree.png" style="width:200px;">
 	
-    <h3 style="color:red;">
+    <h2 style="color:red;">
         As you find things,<br/>
 	add them to the list<br/>
-	(all lowercase).
-    </h3>
+	(all lowercase)
+    </h2>
  
     <pre> 1)   _ $ _ # $    _ $ #</pre>
     <input type="text" id="input1">
