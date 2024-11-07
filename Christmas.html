@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:darkgreen;">
+<script>
+	function checkAns(question) {
+		var str = document.getElementById("input" + question.toString());
+		if (str.value == "") {
+			str.focus();
+			return;
+		}
+		
+		var reveal = document.getElementById("ans" + question.toString());
+		switch (question) {
+		case 1:
+			if (str.value == "santa hat") {
+				reveal.innerHTML = "3";
+			} break;
+		case 2:
+			if (str.value == "football") {
+				reveal.innerHTML = "square";
+			} break;
+		case 3:
+			if (str.value == "coffee mug") {
+				reveal.innerHTML = "subtract (1)";
+			} break;
+		case 4:
+			if (str.value == "yellow trophy") {
+				reveal.innerHTML = "square";
+			} break;
+		case 5:
+			if (str.value == "bone & bowl" || str.value == "bowl & bone" ||
+			str.value == "bone bowl" || str.value = "bowl bone") {
+				reveal.innerHTML = "reverse digits";
+			} break;
+		case 6:
+			if (str.value == "dinosaur") {
+				reveal.innerHTML = "square";
+			} break;
+		}
+	}
+</script>
+
+	<h2 style="color:red;">
+        Christmas Reverse Scavenger Hunt
+    </h2>
+    <h2 style="color:red;">
+        As you find things add them to the list (all lowercase).
+    </h2>
+ 
+    <pre> 1)   _ $ _ # $    _ $ #</pre>
+    <input type="text" id="input1">
+	<p id="ans1" style="color:red;"></p>
+    <button onclick="checkAns(1)">Get Clue 1</button>
+ 
+    <pre> 2)   _ $ $ _ _ _ # #</pre>
+    <input type="text" id="input2">
+	<p id="ans2" style="color:red;"></p>
+    <button onclick="checkAns(2)">Get Clue 2</button>
+	
+	<pre> 3)   _ _ $ $ # #   _ _ _</pre>
+    <input type="text" id="input3">
+	<p id="ans3" style="color:red;"></p>
+    <button onclick="checkAns(3)">Get Clue 3</button>
+	
+	<pre> 4)   $ _ # # !_   _ _ ! _ _ $</pre>
+    <input type="text" id="input4">
+	<p id="ans4" style="color:red;"></p>
+    <button onclick="checkAns(4)">Get Clue 4</button>
+	
+	<pre> 5)   $ # _ _   &   $ # _ _</pre>
+    <input type="text" id="input5">
+	<p id="ans5" style="color:red;"></p>
+    <button onclick="checkAns(5)">Get Clue 5</button>
+	
+	<pre> 6)   _ _ _ _ _ _ _ _</pre>
+    <input type="text" id="input6">
+	<p id="ans6" style="color:red;"></p>
+    <button onclick="checkAns(6)">Get Clue 6</button>
+
+</body>
+</html>
