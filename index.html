@@ -3,8 +3,9 @@
 <body style="background-color:darkgreen;">
 <script>
 	function checkAns(question) {
-		var str = document.getElementById("input" + question.toString()).trim().toLowerCase();
-		if (str.value == "") {
+		var str = document.getElementById("input" + question.toString());
+		var str_value = str.value.trim().toLowerCase();
+		if (str_value == "") {
 			str.focus();
 			return;
 		}
@@ -12,38 +13,38 @@
 		var reveal = document.getElementById("ans" + question.toString());
 		switch (question) {
 		case 1:
-			if (str.value == "santa hat") {
+			if (str_value == "santa hat") {
 				reveal.innerHTML = "three";
 			} else {
 				reveal.innerHTML = "nope";
 			} break;
 		case 2:
-			if (str.value == "football") {
+			if (str_value == "football") {
 				reveal.innerHTML = "square";
 			} else {
 				reveal.innerHTML = "nope";
 			} break;
 		case 3:
-			if (str.value == "coffee mug") {
+			if (str_value == "coffee mug") {
 				reveal.innerHTML = " - (1)";
 			} else {
 				reveal.innerHTML = "nope";
 			} break;
 		case 4:
-			if (str.value == "yellow trophy") {
+			if (str_value == "yellow trophy") {
 				reveal.innerHTML = "square";
 			} else {
 				reveal.innerHTML = "nope";
 			} break;
 		case 5:
-			if (str.value == "bone & bowl" || str.value == "bowl & bone" ||
+			if (str_value == "bone & bowl" || str.value == "bowl & bone" ||
 			str.value == "bone bowl" || str.value == "bowl bone") {
 				reveal.innerHTML = "reverse";
 			} else {
 				reveal.innerHTML = "nope";
 			} break;
 		case 6:
-			if (str.value == "dinosaur") {
+			if (str_value == "dinosaur") {
 				reveal.innerHTML = "square";
 			} else {
 				reveal.innerHTML = "nope";
