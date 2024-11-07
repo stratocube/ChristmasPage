@@ -14,27 +14,39 @@
 		case 1:
 			if (str.value == "santa hat") {
 				reveal.innerHTML = "three";
+			} else {
+				reveal.innerHTML = "nope";
 			} break;
 		case 2:
 			if (str.value == "football") {
 				reveal.innerHTML = "square";
+			} else {
+				reveal.innerHTML = "nope";
 			} break;
 		case 3:
 			if (str.value == "coffee mug") {
 				reveal.innerHTML = " - (1)";
+			} else {
+				reveal.innerHTML = "nope";
 			} break;
 		case 4:
 			if (str.value == "yellow trophy") {
 				reveal.innerHTML = "square";
+			} else {
+				reveal.innerHTML = "nope";
 			} break;
 		case 5:
 			if (str.value == "bone & bowl" || str.value == "bowl & bone" ||
 			str.value == "bone bowl" || str.value == "bowl bone") {
 				reveal.innerHTML = "reverse";
+			} else {
+				reveal.innerHTML = "nope";
 			} break;
 		case 6:
 			if (str.value == "dinosaur") {
 				reveal.innerHTML = "square";
+			} else {
+				reveal.innerHTML = "nope";
 			} break;
 		}
 	}
@@ -58,32 +70,32 @@
     <pre> 1)   _ $ _ # $    _ $ #</pre>
     <input type="text" id="input1">
 	<p id="ans1" style="color:red;"></p>
-    <button onclick="checkAns(1)">Get Clue 1</button>
+    <button onclick="checkAns(1)">Enter Item 1</button>
  
     <pre> 2)   _ $ $ _ _ _ # #</pre>
     <input type="text" id="input2">
 	<p id="ans2" style="color:red;"></p>
-    <button onclick="checkAns(2)">Get Clue 2</button>
+    <button onclick="checkAns(2)">Enter Item 2</button>
 	
 	<pre> 3)   _ _ $ $ # #   _ _ _</pre>
     <input type="text" id="input3">
 	<p id="ans3" style="color:red;"></p>
-    <button onclick="checkAns(3)">Get Clue 3</button>
+    <button onclick="checkAns(3)">Enter Item 3</button>
 	
 	<pre> 4)   $ _ # # ! _   _ _ ! _ _ $</pre>
     <input type="text" id="input4">
 	<p id="ans4" style="color:red;"></p>
-    <button onclick="checkAns(4)">Get Clue 4</button>
+    <button onclick="checkAns(4)">Enter Item 4</button>
 	
 	<pre> 5)   $ # _ _   &   $ # _ _</pre>
     <input type="text" id="input5">
 	<p id="ans5" style="color:red;"></p>
-    <button onclick="checkAns(5)">Get Clue 5</button>
+    <button onclick="checkAns(5)">Enter Item 5</button>
 	
 	<pre> 6)   _ _ _ _ _ _ _ _</pre>
     <input type="text" id="input6">
 	<p id="ans6" style="color:red;"></p>
-    <button onclick="checkAns(6)">Get Clue 6</button>
+    <button onclick="checkAns(6)">Enter Item 6</button>
 
 </body>
 </html>
