@@ -41,6 +41,17 @@
 				button.disabled = true;
 				item_cnt += 1;
 			} else {
+				for (var i=0; i<6; i+=1) {
+					if (i%2 == 0) {
+						setTimeout(function() {
+							input.style.background = "red";
+						}, 150*i);
+					} else {
+						setTimeout(function() {
+							input.style.background = "papayawhip";
+						}, 150*i);
+					}
+				}
 				input.focus();
 			}
 			
