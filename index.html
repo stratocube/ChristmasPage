@@ -1,102 +1,95 @@
 <!DOCTYPE html>
 <html>
-<body style="background-color:darkgreen;">
-<script>
-	function checkAns(question) {
-		var str = document.getElementById("input" + question.toString());
-		var str_value = str.value.trim().toLowerCase();
-		if (str_value == "") {
-			str.focus();
-			return;
+<head>
+	<style>
+		pre {
+			color: yellow;
+			font-family: papyrus;
+			font-size: 36px;
+			margin: 0 0 0 0;
 		}
+		input, button {
+			display: inline;
+			font-family: papyrus;
+			font-size: 24px;
+			font-weight: bold;
+			margin: 0px 10px 50px 0px; 
+		}
+	</style>
+	
+	<script>
+		var item_cnt = 0;
 		
-		var reveal = document.getElementById("ans" + question.toString());
-		switch (question) {
-		case 1:
-			if (str_value == "santa hat") {
-				reveal.innerHTML = "three";
+		function checkAns(question) {
+			var input = document.getElementById("input" + question.toString());
+			var str_value = input.value.trim().toLowerCase();
+			
+			var button = document.getElementById("button" + question.toString());
+			if ((question == 1 && str_value == "santa hat") ||
+				(question == 2 && str_value == "football") ||
+				(question == 3 && str_value == "coffee mug") ||
+				(question == 4 && str_value == "yellow trophy") ||
+				(question == 5 &&
+					(str_value == "bone & bowl" ||
+					str_value == "bowl & bone" ||
+					str_value == "bone bowl" ||
+					str_value == "bowl bone")) ||
+				(question == 6 && str_value == "davidsaurus"))
+			{
+				input.disabled = true;
+				button.disabled = true;
+				item_cnt += 1;
 			} else {
-				reveal.innerHTML = "nope";
-			} break;
-		case 2:
-			if (str_value == "football") {
-				reveal.innerHTML = "square";
-			} else {
-				reveal.innerHTML = "nope";
-			} break;
-		case 3:
-			if (str_value == "coffee mug") {
-				reveal.innerHTML = " - (1)";
-			} else {
-				reveal.innerHTML = "nope";
-			} break;
-		case 4:
-			if (str_value == "yellow trophy") {
-				reveal.innerHTML = "square";
-			} else {
-				reveal.innerHTML = "nope";
-			} break;
-		case 5:
-			if (str_value == "bone & bowl" || str.value == "bowl & bone" ||
-			str.value == "bone bowl" || str.value == "bowl bone") {
-				reveal.innerHTML = "reverse";
-			} else {
-				reveal.innerHTML = "nope";
-			} break;
-		case 6:
-			if (str_value == "dinosaur") {
-				reveal.innerHTML = "square";
-			} else {
-				reveal.innerHTML = "nope";
-			} break;
+				input.focus();
+			}
+			
+			if (item_cnt == 6) {
+				window.location.href = 'SecretCode.html';
+			}
 		}
-	}
-</script>
+	</script>
+</head>
 
-    <h1 style="color:red;">
-        Christmas<br/>
-	Reverse<br/>
-	Scavenger<br/>
-	Hunt!
-    </h1>
+<body style="background-color:darkgreen;min-height:100vh;">
 
-    <img src="Tree.png" style="width:200px;">
+<pre>
+Christmas Reverse
+Scavenger Hunt!
+</pre>
+
+<img src="Tree.png" style="width:400px;">
 	
-    <h2 style="color:red;">
-        Enter the names of<br/>
-	tiny cute things<br/>
-	into the list :3<br/>
-    </h2>
+<pre>
+As you discover
+tiny cute things,
+enter them into
+the list below &#9731
+
+</pre>
  
-    <pre> 1) _ $ _ # $    _ $ #</pre>
+    <pre>1) _ &#9833 _ &#9834 &#9833      _ &#9833 &#9834</pre>
     <input type="text" id="input1">
-	<p id="ans1" style="color:red;"></p>
-    <button onclick="checkAns(1)">Enter Item 1</button>
+    <button id="button1" onclick="checkAns(1)">Enter Item 1</button>
  
-    <pre> 2) _ $ $ _ _ _ # #</pre>
+    <pre> 2) _ &#9835 &#9835 _ _ _ &#9836 &#9836</pre>
     <input type="text" id="input2">
-	<p id="ans2" style="color:red;"></p>
-    <button onclick="checkAns(2)">Enter Item 2</button>
+    <button id="button2" onclick="checkAns(2)">Enter Item 2</button>
 	
-	<pre> 3) _ _ $ $ # #   _ _ _</pre>
+	<pre> 3) _ _ &#9833 &#9833 &#9835 &#9835      _ _ _</pre>
     <input type="text" id="input3">
-	<p id="ans3" style="color:red;"></p>
-    <button onclick="checkAns(3)">Enter Item 3</button>
+    <button id="button3" onclick="checkAns(3)">Enter Item 3</button>
 	
-	<pre> 4) $ _ # # ! _   _ _ ! _ _ $</pre>
+	<pre> 4) &#9833 _ &#9834 &#9834 &#9836 _      _ _ &#9836 _ _ &#9833</pre>
     <input type="text" id="input4">
-	<p id="ans4" style="color:red;"></p>
-    <button onclick="checkAns(4)">Enter Item 4</button>
+    <button id="button4" onclick="checkAns(4)">Enter Item 4</button>
 	
-	<pre> 5) $ # _ _   &   $ # _ _</pre>
+	<pre> 5) &#9834 &#9836 _ _      &      &#9834 &#9836 _ _</pre>
     <input type="text" id="input5">
-	<p id="ans5" style="color:red;"></p>
-    <button onclick="checkAns(5)">Enter Item 5</button>
+    <button id="button5" onclick="checkAns(5)">Enter Item 5</button>
 	
-	<pre> 6) _ _ _ _ _ _ _ _</pre>
+	<pre> 6) &#9833 &#9835 _ _ &#9833 &#9834 &#9835 &#9836 _ &#9836 &#9834</pre>
     <input type="text" id="input6">
-	<p id="ans6" style="color:red;"></p>
-    <button onclick="checkAns(6)">Enter Item 6</button>
+    <button id="button6" onclick="checkAns(6)">Enter Item 6</button>
 
 </body>
 </html>
